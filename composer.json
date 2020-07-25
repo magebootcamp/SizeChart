@@ -10,5 +10,13 @@
     }
   ],
   "require": {
+  },
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "MageBootcamp\\SizeChart\\": ""
+    }
   }
 }
