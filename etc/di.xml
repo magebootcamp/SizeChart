@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright (c) MageBootcamp 2020.
+  ~
+  ~ Created by MageBootcamp: The Ultimate Online Magento Course.
+  ~ We are here to help you become a Magento PRO.
+  ~ Watch and learn at https://magebootcamp.com.
+  ~
+  ~ @author Daniel Donselaar
+  -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="MageBootcamp\SizeChart\Model\Charts\ChartSourceInterface"
+                type="MageBootcamp\SizeChart\Model\Charts\PredefinedChartList"/>
+    <type name="Magento\Framework\Console\CommandListInterface">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="MageBootcampAutoUpdateProducts" xsi:type="object">MageBootcamp\SizeChart\Console\Command\AutoUpdateProducts</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="MageBootcamp\SizeChart\Model\Charts\PredefinedChartList">
+        <arguments>
+            <argument name="charts" xsi:type="array">
+                <item name="chart_men_top" xsi:type="object">MageBootcamp\SizeChart\Model\Charts\Selection\Men\Tops</item>
+                <item name="chart_woman_top" xsi:type="object">MageBootcamp\SizeChart\Model\Charts\Selection\Woman\Tops</item>
+            </argument>
+        </arguments>
+    </type>
+    <!--
+    Fixed mapping for product sizes.
+    You can set this configuration on a category and it will import the sizes based on the mapping
+    -->
+    <virtualType name="MageBootcamp\SizeChart\Model\Charts\Selection\Men\Tops" type="MageBootcamp\SizeChart\Model\Charts\SizeChart">
+        <arguments>
+            <argument name="key" xsi:type="string">chart_men_top</argument>
+            <argument name="label" xsi:type="string" translate="true">Chart Men's Top</argument>
+            <argument name="sizeMapping" xsi:type="array">
+                <item name="XS" xsi:type="array">
+                    <item name="chest_size_from_number" xsi:type="string">81</item>
+                    <item name="chest_size_to_number" xsi:type="string">92</item>
+                    <item name="waist_size_from_number" xsi:type="string">63</item>
+                    <item name="waist_size_to_number" xsi:type="string">74</item>
+                    <item name="hip_size_from_number" xsi:type="string">78</item>
+                    <item name="hip_size_to_number" xsi:type="string">89</item>
+                </item>
+                <item name="S" xsi:type="array">
+                    <item name="chest_size_from_number" xsi:type="string">93</item>
+                    <item name="chest_size_to_number" xsi:type="string">98</item>
+                    <item name="waist_size_from_number" xsi:type="string">75</item>
+                    <item name="waist_size_to_number" xsi:type="string">81</item>
+                    <item name="hip_size_from_number" xsi:type="string">90</item>
+                    <item name="hip_size_to_number" xsi:type="string">95</item>
+                </item>
+                <item name="M" xsi:type="array">
+                    <item name="chest_size_from_number" xsi:type="string">99</item>
+                    <item name="chest_size_to_number" xsi:type="string">104</item>
+                    <item name="waist_size_from_number" xsi:type="string">81</item>
+                    <item name="waist_size_to_number" xsi:type="string">86</item>
+                    <item name="hip_size_from_number" xsi:type="string">96</item>
+                    <item name="hip_size_to_number" xsi:type="string">101</item>
+                </item>
+                <item name="L" xsi:type="array">
+                    <item name="chest_size_from_number" xsi:type="string">105</item>
+                    <item name="chest_size_to_number" xsi:type="string">116</item>
+                    <item name="waist_size_from_number" xsi:type="string">87</item>
+                    <item name="waist_size_to_number" xsi:type="string">92</item>
+                    <item name="hip_size_from_number" xsi:type="string">102</item>
+                    <item name="hip_size_to_number" xsi:type="string">107</item>
+                </item>
+                <item name="XL" xsi:type="array">
+                    <item name="chest_size_from_number" xsi:type="string">111</item>
+                    <item name="chest_size_to_number" xsi:type="string">116</item>
+                    <item name="waist_size_from_number" xsi:type="string">99</item>
+                    <item name="waist_size_to_number" xsi:type="string">104</item>
+                    <item name="hip_size_from_number" xsi:type="string">108</item>
+                    <item name="hip_size_to_number" xsi:type="string">113</item>
+                </item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="MageBootcamp\SizeChart\Model\Charts\Selection\Woman\Tops" type="MageBootcamp\SizeChart\Model\Charts\SizeChart">
+        <arguments>
+            <argument name="key" xsi:type="string">chart_woman_top</argument>
+            <argument name="label" xsi:type="string" translate="true">Chart Woman's Top</argument>
+            <argument name="sizeMapping" xsi:type="array">
+                <item name="XS" xsi:type="array">
+                    <item name="chest_size_from_number" xsi:type="string">78</item>
+                    <item name="chest_size_to_number" xsi:type="string">85</item>
+                    <item name="waist_size_from_number" xsi:type="string">60</item>
+                    <item name="waist_size_to_number" xsi:type="string">67</item>
+                    <item name="hip_size_from_number" xsi:type="string">86</item>
+                    <item name="hip_size_to_number" xsi:type="string">93</item>
+                </item>
+                <item name="S" xsi:type="array">
+                    <item name="chest_size_from_number" xsi:type="string">86</item>
+                    <item name="chest_size_to_number" xsi:type="string">89</item>
+                    <item name="waist_size_from_number" xsi:type="string">68</item>
+                    <item name="waist_size_to_number" xsi:type="string">71</item>
+                    <item name="hip_size_from_number" xsi:type="string">94</item>
+                    <item name="hip_size_to_number" xsi:type="string">97</item>
+                </item>
+                <item name="M" xsi:type="array">
+                    <item name="chest_size_from_number" xsi:type="string">90</item>
+                    <item name="chest_size_to_number" xsi:type="string">93</item>
+                    <item name="waist_size_from_number" xsi:type="string">72</item>
+                    <item name="waist_size_to_number" xsi:type="string">75</item>
+                    <item name="hip_size_from_number" xsi:type="string">98</item>
+                    <item name="hip_size_to_number" xsi:type="string">101</item>
+                </item>
+                <item name="L" xsi:type="array">
+                    <item name="chest_size_from_number" xsi:type="string">94</item>
+                    <item name="chest_size_to_number" xsi:type="string">98</item>
+                    <item name="waist_size_from_number" xsi:type="string">76</item>
+                    <item name="waist_size_to_number" xsi:type="string">80</item>
+                    <item name="hip_size_from_number" xsi:type="string">102</item>
+                    <item name="hip_size_to_number" xsi:type="string">106</item>
+                </item>
+                <item name="XL" xsi:type="array">
+                    <item name="chest_size_from_number" xsi:type="string">99</item>
+                    <item name="chest_size_to_number" xsi:type="string">104</item>
+                    <item name="waist_size_from_number" xsi:type="string">81</item>
+                    <item name="waist_size_to_number" xsi:type="string">86</item>
+                    <item name="hip_size_from_number" xsi:type="string">107</item>
+                    <item name="hip_size_to_number" xsi:type="string">112</item>
+                </item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <!--  Frontend filter  -->
+    <virtualType name="categoryFilterList" type="Magento\Catalog\Model\Layer\FilterList">
+        <arguments>
+            <argument name="filters" xsi:type="array">
+                <item name="decimalRange" xsi:type="string">MageBootcamp\SizeChart\Model\Layer\Filter\DecimalRange</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Catalog\Model\Layer\FilterList">
+        <plugin name="AddSizeFilters"
+                type="MageBootcamp\SizeChart\Plugin\AddSizeFilters"/>
+    </type>
+</config>

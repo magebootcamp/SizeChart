@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright (c) MageBootcamp 2020.
+  ~
+  ~ Created by MageBootcamp: The Ultimate Online Magento Course.
+  ~ We are here to help you become a Magento PRO.
+  ~ Watch and learn at https://magebootcamp.com.
+  ~
+  ~ @author Daniel Donselaar
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Api/etc/extension_attributes.xsd">
+    <extension_attributes for="Magento\Catalog\Api\Data\ProductInterface">
+        <attribute code="chest_size_from_number" type="double" />
+        <attribute code="chest_size_to_number" type="double" />
+        <attribute code="waist_size_from_number" type="double" />
+        <attribute code="waist_size_to_number" type="double" />
+        <attribute code="hip_size_from_number" type="double" />
+        <attribute code="hip_size_to_number" type="double" />
+    </extension_attributes>
+</config>

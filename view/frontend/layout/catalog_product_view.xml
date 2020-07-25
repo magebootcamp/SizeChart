@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright (c) MageBootcamp 2020.
+  ~
+  ~ Created by MageBootcamp: The Ultimate Online Magento Course.
+  ~ We are here to help you become a Magento PRO.
+  ~ Watch and learn at https://magebootcamp.com.
+  ~
+  ~ @author Daniel Donselaar
+  -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="MageBootcamp_SizeChart::css/chart.css"/>
+    </head>
+    <body>
+        <referenceBlock name="product.info.details">
+            <block class="MageBootcamp\SizeChart\Block\Product\Chart" name="size.chart.tab" template="MageBootcamp_SizeChart::product/chart.phtml" group="detailed_info">
+                <arguments>
+                    <argument name="sort_order" xsi:type="string">50</argument>
+                    <argument name="title" xsi:type="string" translate="true">Size Chart</argument>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="sizeChart" xsi:type="array">
+                                <item name="component" xsi:type="string">MageBootcamp_SizeChart/js/view/chart</item>
+                                <item name="config" xsi:type="array">
+                                    <item name="fieldConfig" xsi:type="array" />
+                                </item>
+                                <item name="scope" xsi:type="string">sizeChart</item>
+                            </item>
+                        </item>
+                    </argument>
+                    <argument name="attributes" xsi:type="array">
+                        <item name="chest_size" xsi:type="string" translate="true">Chest Size</item>
+                        <item name="hip_size" xsi:type="string" translate="true">Hip Size</item>
+                        <item name="waist_size" xsi:type="string" translate="true">Waist Size</item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

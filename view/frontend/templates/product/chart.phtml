@@ -1,0 +1,37 @@
+<?php
+/**
+ * Copyright (c) MageBootcamp 2020.
+ *
+ * Created by MageBootcamp: The Ultimate Online Magento Course.
+ * We are here to help you become a Magento PRO.
+ * Watch and learn at https://magebootcamp.com.
+ *
+ * @author Daniel Donselaar
+ */
+/** @var \MageBootcamp\SizeChart\Block\Product\Chart $block */
+?>
+<div class="block block-size-chart" data-bind="scope: 'sizeChart'" id="size-chart" data-role="size-chart">
+    <div class="block-chart">
+        <table style="width:100%">
+            <!-- Go through all the filter attributes -->
+            <tr>
+                <th><?= __('Size') ?></th>
+                <?php foreach ($block->getAttributes() as $label): ?>
+                    <th><?= $label ?></th>
+                <?php endforeach; ?>
+            </tr>
+            <?php foreach ($block->getChildren() as $childProduct): ?>
+            <tr class="size-chart-row" data-bind="event: { mouseover: preselect }" data-size="<?= $childProduct->getSize() ?>">
+                <td><?= $block->getOptionValueLabel($childProduct->getSize()) ?></td>
+                <?php foreach ($block->getAttributes() as $key => $label): ?>
+                    <td><?= $block->formatRange($childProduct, $key)?></td>
+                <?php endforeach; ?>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+    </div>
+</div>
+<!-- Initialize the UI component  -->
+<script type="text/x-magento-init">
+{"[data-role=size-chart]": {"Magento_Ui/js/core/app": <?= /* @noEscape */ $block->getJsLayout() ?>}}
+</script

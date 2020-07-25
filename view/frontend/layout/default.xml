@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright (c) MageBootcamp 2020.
+  ~
+  ~ Created by MageBootcamp: The Ultimate Online Magento Course.
+  ~ We are here to help you become a Magento PRO.
+  ~ Watch and learn at https://magebootcamp.com.
+  ~
+  ~ @author Daniel Donselaar
+  -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="MageBootcamp_SizeChart::css/mySizes.css"/>
+    </head>
+    <body>
+        <referenceContainer name="sidebar.additional">
+            <block class="MageBootcamp\SizeChart\Block\Sidebar\MySize" name="catalog.my-size.sidebar"
+                   template="MageBootcamp_SizeChart::product/sidebar.phtml">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="mySize" xsi:type="array">
+                                <item name="component" xsi:type="string">MageBootcamp_SizeChart/js/view/my-sizes</item>
+                                <item name="config" xsi:type="array">
+                                    <item name="fieldConfig" xsi:type="array">
+                                        <item name="chest_size_from_number" xsi:type="string" translate="true">Chest Size</item>
+                                        <item name="waist_size_from_number" xsi:type="string" translate="true">Waist Size</item>
+                                        <item name="hip_size_from_number" xsi:type="string" translate="true">Hip Size</item>
+                                    </item>
+                                </item>
+                                <item name="scope" xsi:type="string">mySize</item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

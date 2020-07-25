@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright (c) MageBootcamp 2020.
+  ~
+  ~ Created by MageBootcamp: The Ultimate Online Magento Course.
+  ~ We are here to help you become a Magento PRO.
+  ~ Watch and learn at https://magebootcamp.com.
+  ~
+  ~ @author Daniel Donselaar
+  -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Ui\DataProvider\Modifier\Pool">
+        <arguments>
+            <argument name="modifiers" xsi:type="array">
+                <item name="from_to_number" xsi:type="array">
+                    <item name="class" xsi:type="string">MageBootcamp\SizeChart\Ui\DataProvider\Product\Form\Modifier\FromToNumber</item>
+                    <item name="sortOrder" xsi:type="number">100</item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="MageBootcamp\SizeChart\Ui\DataProvider\Product\Form\Modifier\FromToNumber">
+        <arguments>
+            <argument name="fromToFields" xsi:type="array">
+                <item name="chest_size" xsi:type="string">chest_size</item>
+                <item name="waist_size" xsi:type="string">waist_size</item>
+                <item name="hip_size" xsi:type="string">hip_size</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

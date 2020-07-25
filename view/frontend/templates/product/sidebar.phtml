@@ -1,0 +1,47 @@
+<?php
+/**
+ * Copyright (c) MageBootcamp 2020.
+ *
+ * Created by MageBootcamp: The Ultimate Online Magento Course.
+ * We are here to help you become a Magento PRO.
+ * Watch and learn at https://magebootcamp.com.
+ *
+ * @author Daniel Donselaar
+ */
+/* @var \MageBootcamp\SizeChart\Block\Sidebar\CustomerSize $block */
+?>
+<div class="block block-my-size" data-bind="scope: 'mySize'" data-role="my-size-sidebar">
+    <div class="block-title" data-bind="visible: filtersAvailable()" style="display: none;">
+        <strong id="block-my-size-heading" role="heading" aria-level="2"><?= $block->escapeHtml(__('Filter by size')) ?></strong>
+    </div>
+    <div class="block-form" data-bind="visible: filtersAvailable()" style="display: none;">
+        <form action=""
+              class="my-size-form"
+              method="get"
+              id="my-size-form"
+              data-bind="submit: filter">
+            <fieldset class="fieldset">
+                <div class="field required" data-bind="foreach: fields">
+                    <label for="chest_size_field" class="label"><span data-bind="text: $data.label"></span></label>
+                    <div class="control">
+                        <input type="text"
+                               class="input-text"
+                               data-bind="attr: { id : $data.key, name: $data.key }">
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="actions-toolbar">
+                <div class="primary actions-primary">
+                    <button type="submit"
+                            class="action submit primary"><span><?= $block->escapeHtml(__('Filter')) ?></span></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="text/x-magento-init">
+{"[data-role=my-size-sidebar]": {"Magento_Ui/js/core/app": <?= /* @noEscape */ $block->getJsLayout() ?>}}
+</script>
+<?php echo $block->getChildHtml() ?>

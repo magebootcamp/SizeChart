@@ -1,0 +1,27 @@
+/*
+ * Copyright (c) MageBootcamp 2020.
+ *
+ * Created by MageBootcamp: The Ultimate Online Magento Course.
+ * We are here to help you become a Magento PRO.
+ * Watch and learn at https://magebootcamp.com.
+ *
+ * @author Daniel Donselaar
+ */
+.block-my-size .block-title {
+    margin-bottom: 20px;
+}
+
+#block-my-size-heading {
+    font-size: 18px;
+    font-weight: 300;
+    vertical-align: middle;
+}
+
+.my-size-form .control {
+    margin: 5px 0 15px 0;
+}
+
+
+.my-size-form .label span{
+    font-weight: normal;
+}
