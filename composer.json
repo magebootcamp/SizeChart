@@ -1,5 +1,5 @@
 {
-  "name": "MageBootcamp/SizeChart",
+  "name": "magebootcamp/sizechart",
   "description": "A Magento 2 modules that add a size chart to your store",
   "minimum-stability": "stable",
   "license": "proprietary",
