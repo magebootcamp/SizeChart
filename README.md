@@ -1,6 +1,6 @@
 ![MageBootcamp Logo](https://magebootcamp.com/wp-content/uploads/2020/07/mbc_logo_export01.png)
 
-## Overview
+# MageBootcamp Size Chart
 MageBootcamp SizeChart is a module that allows you to add
 size chart to your product detail page and filter the products based on the product sizes.
 The sizes charts are data-driven, so if you add all the data to your products, the size chart will automatically be generated.
