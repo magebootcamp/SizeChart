@@ -86,6 +86,10 @@ define([
             if (formChange) {
                 location.href = url.href;
             }
+        },
+
+        filtersAvailable: function () {
+            return this.fields.length > 0;
         }
     });
 });
