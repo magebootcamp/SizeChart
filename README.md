@@ -12,7 +12,10 @@ If you need any help with this module, please let me know.
 
 Kind regards,
 
-Daniel Donselaar - [Mentor at MagebootCamp](https://magebootcamp.com)
+Daniel Donselaar
+
+[Mentor at MagebootCamp](https://magebootcamp.com)
+
 [Daniel@MageBootcamp.com](mailto:daniel@magebootcamp.com)
 
 ## Installation
@@ -32,7 +35,7 @@ php bin/magento module:uninstall MageBootcamp_SizeChart;
 ```
 
 ## Features
-#### 1. Size Chart in the product detail page
+### 1. Size Chart in the product detail page
 Add a size chart to your product detail view and let the customer know which sizes you have.
 You can show the chest, waist, and hip size. By hovering over the list of sizes you can preselect the default sizes (S, M, L, and XL).
 
@@ -40,7 +43,7 @@ You can show the chest, waist, and hip size. By hovering over the list of sizes 
 
 > Preselect swatches based on the Size Chart
 
-#### 2. Filter by sizes on the product overview page
+### 2. Filter by sizes on the product overview page
 Your customer can filter products based on their chest, waist, and hip size. You will see a custom sidebar widget that has multiple fields.
 Optionally, you can install the CustomerFitness module of MageBootcamp and filter the size based on the saved sizes in the customer account.
 
@@ -52,7 +55,7 @@ Optionally, you can install the CustomerFitness module of MageBootcamp and filte
 
 > Size filters applied
 
-#### 3. Data driven size chart: import sizes
+### 3. Data driven size chart: import sizes
 The sizes (chest, waist, and hip size) are product attributes. There are multiple ways you can import your data:
 - Magento default importer to fill product attribute data (for example import from a PIM)
 - Add the data by hand through the Magento backend
@@ -85,7 +88,7 @@ Backend > Catalog > Category > [select category] > Size Guide > Size Chart
 
 > Load sizes based on a size chart mapping
 
-#### 4. Optional: Save sizes for a customer
+### 4. Optional: Save sizes for a customer
 
 Optionally, you can install the MageBootcamp CustomerFitness module. The module allows you to add a chest, waist, and hip size
 to the customer account. The customer can press the 'Use my size' button to apply the size filter with the customer sizes.
