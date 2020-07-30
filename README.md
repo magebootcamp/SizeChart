@@ -5,10 +5,10 @@ MageBootcamp SizeChart is a module that allows you to add
 size chart to your product detail page and filter the products based on the product sizes.
 The sizes charts are data-driven, so if you add all the data to your products, the size chart will automatically be generated.
 
-This module is free to use and is part of the MageBootcamp course. I've added extra comments in the module to
+This module is free to use and is part of the MageBootcamp course. We have added extra comments in the module to
 help you out learning Magento but also to use this module as reference.
 
-If you need any help with this module, please let me know.
+If you need any help with this module, please let us know.
 
 Kind regards,
 
@@ -39,7 +39,7 @@ php bin/magento module:uninstall MageBootcamp_SizeChart;
 Add a size chart to your product detail view and let the customer know which sizes you have.
 You can show the chest, waist, and hip size. By hovering over the list of sizes you can preselect the default sizes (S, M, L, and XL).
 
-![Preselect swatches based on the Size Chart](https://magebootcamp.com/wp-content/uploads/2020/07/product-detail-page-size-chart.png)
+![Preselect swatches based on the Size Chart](https://magebootcamp.com/wp-content/uploads/2020/07/magebootcamp-size-chart-select-swatch-2.png)
 
 > Preselect swatches based on the Size Chart
 
